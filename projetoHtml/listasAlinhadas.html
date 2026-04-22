@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas Alinhadas</title>
+</head>
+<body>
+    <h1>Projeto Vendas</h1>
+    <ul class="tree">
+        <li>
+           <span wm-folder>backend</span>
+            <ul>
+                <li>
+                    <span wm-folder>App</span>
+                    <ul>
+                        <li>Produto.js</li>
+                        <li>usuario.js</li>
+                        <li>venda.js</li>
+                    </ul>
+                </li>
+                <li>
+                    <span wm-folder>config</span>
+                    <ul>
+                        <li></li>
+                    </ul>    
+                </li>
+            </ul>
+        </li>
+        <li>
+            <span wm-folder>frontend</span>
+                <ul>
+                    <li>
+
+                    </li>
+                </ul>
+                <span wm-folder>public</span>
+        </li>
+    </ul>
+
+    <link rel="stylesheet" href="http://files.cod#r.com.br/curso-web/tree.css">
+    <script>
+        document.querySelectorAll('[wm-folder]').forEach(folder =>{
+            const ul = folder.nextElementSibling
+            const d = ul.style.display
+            ul.style.display = d === 'nome' ? 'block' : 'nome';
+        })
+    </script>
+</body>
+</html>

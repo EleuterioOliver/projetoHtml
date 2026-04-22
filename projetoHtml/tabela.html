@@ -18,6 +18,31 @@
             color: #888;
             margin-bottom: 20px;
         }
+
+        th, td{
+            padding: 12px;
+            text-align: left;
+            font-size: 1rem; /* vale 16px*/
+            border-bottom: 1px solid rgb(145, 41, 145);
+        }
+
+        th{
+            background-color: blueviolet;
+            color:chocolate;
+            text-transform: uppercase;
+        }
+
+        thead tr{
+            border-bottom: 3px solid peru;
+        }
+
+        tbody tr:hover{
+            background-color: blue;
+        }
+        tfoot{
+            background-color: darkred;
+            color: #fff;
+        }
     </style>
 </head>
 <body>
@@ -45,7 +70,7 @@
         </tbody>
         <tfoot>
             <tr>
-               <td colspan="3"></td>
+               <td colspan="3"> Total</td>
                <td>R$ 48.000,00</td>   
             </tr>
         </tfoot>
