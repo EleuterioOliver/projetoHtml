@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela</title>
+    <style>
+        table{
+            width: 80%;
+            margin: 50px auto;
+            border-collapse: collapse;
+            box-shadow: 0 4px 6xp rgba(red, green, blue, alpha);
+        }
+
+        caption{
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #888;
+            margin-bottom: 20px;
+        }
+
+        th, td{
+            padding: 12px;
+            text-align: left;
+            font-size: 1rem; /* vale 16px*/
+            border-bottom: 1px solid rgb(145, 41, 145);
+        }
+
+        th{
+            background-color: blueviolet;
+            color:chocolate;
+            text-transform: uppercase;
+        }
+
+        thead tr{
+            border-bottom: 3px solid peru;
+        }
+
+        tbody tr:hover{
+            background-color: blue;
+        }
+        tfoot{
+            background-color: darkred;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>Produtos</caption>
+        <thead>
+            <th>Produto</th>
+            <th>Preço</th>
+            <th>Quantidade</th>
+            <th>Total</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Iphone 17</td>
+                <td>R$ 7.000,00</td>
+                <td>5</th>
+                <td>R$ 35.000,00</td>
+            </tr>
+            <tr>
+                <td>Samsung S26</td>
+                <td>R$ 65000</td>
+                <td>2</td>
+                <td>R$ 13.000,00</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+               <td colspan="3"> Total</td>
+               <td>R$ 48.000,00</td>   
+            </tr>
+        </tfoot>
+      </tbody>
+  </table>
+</body>
+</html>
