@@ -6,9 +6,55 @@
     <title>Listas Alinhadas</title>
 </head>
 <body>
-    <h1>Projeto Vendas</h1>
+    <style>
+    /* Estilo para as pastas (com o atributo wm-folder) */
+    [wm-folder] {
+        background-color: #003c79; /* Cor de fundo da "barra" */
+        color: #ecf0f1;           /* Cor da letra */
+        padding: 2px 8px;
+        border-radius: 4px;       /* Cantos arredondados */
+        cursor: pointer;
+        display: inline-block;
+        margin-bottom: 3px;
+        font-family: monospace;
+        transition: 0.3s;         /* Efeito suave ao passar o mouse */
+    }
+
+    [wm-folder]:hover {
+        background-color: #5aa2eb; /* Cor quando passa o mouse */
+        filter: brightness(1.2);
+    }
+
+    /* Estilo para os arquivos (o texto simples dentro do li) */
+    .tree li {
+        color: #333;
+        font-family: 'Courier New', Courier, monospace;
+        padding: 2px 0;
+    }
+
+    /* Se você quiser uma barra de cor diferente para os arquivos */
+    .tree li:not(:has(span)) {
+        background-color: #c4c4c4; 
+        padding-left: 10px;
+        border-left: 3px solid #3498db; /* Barra vertical azul no início do arquivo */
+        margin: 2px 0;
+        display: block;
+        width: fit-content;
+    }
+    .projeto-titulo {
+    background-color: #004080; /* Mesma cor azul das pastas */
+    color: white;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-family: sans-serif;
+    font-size: 2.5rem; /* Ajusta o tamanho se necessário */
+    display: inline-block;
+    margin-bottom: 10px;
+    }
+</style>
     <ul class="tree">
         <li>
+         <h1><span class="projeto-titulo">Projeto Vendas</span></h1>
            <span wm-folder>backend</span>
             <ul>
                 <li>
@@ -22,28 +68,36 @@
                 <li>
                     <span wm-folder>config</span>
                     <ul>
-                        <li></li>
+                        <li>banco.js</li>
+                        <li>rotas.js</li>
+                        <li>servidor.js</li>
                     </ul>    
                 </li>
             </ul>
         </li>
         <li>
-            <span wm-folder>frontend</span>
-                <ul>
-                    <li>
-
-                    </li>
-                </ul>
+        <span wm-folder>frontend</span>
+        <ul>
+          </li>
                 <span wm-folder>public</span>
-        </li>
-    </ul>
+                <ul>
+                    <li>app.css</li>
+                    <li>app.js</li>
+                    <li>index.html</li>
+                </ul>
+            </li>  
+        </ul>
+    </li>
+</ul>
 
-    <link rel="stylesheet" href="http://files.cod#r.com.br/curso-web/tree.css">
+    <link rel="stylesheet" href="http://files.cod3r.com.br/curso-web/tree.css">
     <script>
         document.querySelectorAll('[wm-folder]').forEach(folder =>{
-            const ul = folder.nextElementSibling
-            const d = ul.style.display
-            ul.style.display = d === 'nome' ? 'block' : 'nome';
+            folder.onclick = function(e){ // <--- adicionei a funcionalidade que a função ira funcionar pelo click
+                const ul = folder.nextElementSibling
+                const d = ul.style.display
+                ul.style.display = d === 'none' ? 'block' : 'none';
+           }  // <--- adicionei essa chave fechando da folder.onclick
         })
     </script>
 </body>
